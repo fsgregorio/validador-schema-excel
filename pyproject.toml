@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "validador-schema-excel"
+version = "1.0"
+description = ""
+authors = ["fsgregorio <fsgregorio92@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
