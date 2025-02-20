@@ -28,7 +28,7 @@ def test_sales_with_invalid_data():
         "valor": -100,
         "product": "",
         "quantity": -1,
-        "category": "category1"
+        "category": "categor2"
     }
     
     with pytest.raises(ValueError):

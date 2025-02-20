@@ -9,7 +9,7 @@ readme = "README.md"
 python = "3.11.0"
 pandas = "^2.2.3"
 streamlit = "^1.42.1"
-pydantic = "^2.10.6"
+pydantic = {extras = ["email"], version = "^2.10.6"}
 pytest = "^8.3.4"
 
 
