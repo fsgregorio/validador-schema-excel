@@ -24,6 +24,14 @@ class ExcelValidatorUI:
             return uploaded_file
         return None
     
+    def display_result(self, result, errors):
+        if errors:
+            st.error("Errors founded🫠:")
+            for error in errors:
+                st.error(error)
+        else:
+            st.success("Files loaded successfully!😉")
+    
 if __name__ == '__main__':
     app = ExcelValidatorUI()
     app.display()
