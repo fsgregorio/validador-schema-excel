@@ -5,6 +5,8 @@ description = ""
 authors = ["fsgregorio <fsgregorio92@gmail.com>"]
 readme = "README.md"
 
+package-mode = false
+
 [tool.poetry.dependencies]
 python = ">=3.11.0,<3.13"
 pandas = "^2.2.3"
