@@ -30,7 +30,7 @@ class ExcelValidatorUI:
             for error in errors:
                 st.error(error)
         else:
-            st.success("Files loaded successfully!😉")
+            st.success("Files loaded sssssuccessfully!😉")
     
 if __name__ == '__main__':
     app = ExcelValidatorUI()
