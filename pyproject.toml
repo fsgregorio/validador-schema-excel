@@ -6,7 +6,7 @@ authors = ["fsgregorio <fsgregorio92@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.11.0"
+python = ">=3.11.0,<3.13"
 pandas = "^2.2.3"
 streamlit = "^1.42.1"
 pydantic = {extras = ["email"], version = "^2.10.6"}
