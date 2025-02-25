@@ -22,9 +22,8 @@ jobs:
               run: poetry install  
 
             - name: rodar testes de contrato
-              run: pytest tests/test_contract.py 
+              run: poetry run pytest tests/test_contrato.py
 
             - name: rodar testes funcionais
-              run: pytest tests/test_functional.py
-
+              run: poetry run pytest tests/test_functional.py
 
