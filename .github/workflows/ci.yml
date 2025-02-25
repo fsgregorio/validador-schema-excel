@@ -27,3 +27,4 @@ jobs:
             - name: rodar minha rotina de testes
               run: pytest tests/test_contrato.py 
               run: pytest tests/test_functional.py 
+
