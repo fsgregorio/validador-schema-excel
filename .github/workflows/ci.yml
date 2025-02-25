@@ -24,7 +24,10 @@ jobs:
             - name: Libs Install
               run: pip install -r requirements.txt
 
-            - name: rodar minha rotina de testes
+            - name: rodar testes de contrato
               run: pytest tests/test_contrato.py 
-              run: pytest tests/test_functional.py 
+
+            - name: rodar testes funcionais
+              run: pytest tests/test_functional.py
+
 
