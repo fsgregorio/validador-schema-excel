@@ -21,9 +21,6 @@ jobs:
             - name: Install dependencies
               run: poetry install  
 
-            - name: Libs Install
-              run: pip install -r requirements.txt
-
             - name: rodar testes de contrato
               run: pytest tests/test_contrato.py 
 
