@@ -1,16 +1,29 @@
 name: ci
 
 on: pull_request
-  jobs:
+jobs:
     test:
-      runs-on: ubuntu-latest
+        runs-on: ubuntu-latest
+        steps:
+            - name: Repo download
+              uses: actions/checkout@v4
 
-      steps:
-        - name: first step
-          run: echo "Hello, ${{ github.actor }}."
+            - name: Python Install
+              uses: actions/setup-python@v5
+              with:
+                python-version: ${{ matrix.python-version }}
 
-        - name: show the files in the current directory
-          run: echo "The files in this directory are $(ls)."
+            - name: Install Poetry
+              run: |
+                curl -sSL https://install.python-poetry.org | python -
+                echo "${HOME}/.local/bin" >> $GITHUB_PATH
 
-        - name: what repository is this?
-          run: echo "This is ${{ github.repository }}."
+            - name: Install dependencies
+              run: poetry install  
+
+            - name: Libs Install
+              run: pip install -r requirements.txt
+
+            - name: rodar minha rotina de testes
+              run: pytest tests/test_contrato.py 
+              run: pytest tests/test_functional.py 
