@@ -1,1 +1,1 @@
-print("adsdasdasdas")
+print("123456")
