@@ -1,16 +1,18 @@
 name: ci
 
-on: pull_request
-  jobs:
-    test:
-      runs-on: ubuntu-latest
+on:
+  pull_request:
 
-      steps:
-        - name: first step
-          run: echo "Hello, ${{ github.actor }}."
+jobs:
+  test:
+    runs-on: ubuntu-latest
 
-        - name: show the files in the current directory
-          run: echo "The files in this directory are $(ls)."
+    steps:
+      - name: first step
+        run: echo "Hello, ${{ github.actor }}."
 
-        - name: what repository is this?
-          run: echo "This is ${{ github.repository }}."
+      - name: show the files in the current directory
+        run: echo "The files in this directory are $(ls)."
+
+      - name: what repository is this?
+        run: echo "This is ${{ github.repository }}."
