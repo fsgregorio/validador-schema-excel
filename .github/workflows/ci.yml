@@ -8,11 +8,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: first step
-        run: echo "Hello, ${{ github.actor }}."
+      - uses: actions/checkout@v2
 
-      - name: show the files in the current directory
-        run: echo "The files in this directory are $(ls)."
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.11"
+      
+      - name: install dependencies
+        run: |
+          poetry install
+          poetry run pre-commit install
 
-      - name: what repository is this?
-        run: echo "This is ${{ github.repository }}."
+      - name: run tests
+        run: |
+          poetry run pytest
+          poetry run pre-commit
